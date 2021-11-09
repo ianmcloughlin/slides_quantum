@@ -2,8 +2,10 @@
 
 <html lang="en">
 <head>
+  <!-- Using revealjs 4.1.2 -->
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <title>Quantum Reality</title>
   <meta name="description" content="Slides by Ian McLoughlin.">
@@ -13,28 +15,49 @@
   <meta property="og:type" content="website">
   <meta property="og:description" content="Slides by Ian McLoughlin.">
 
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/blood.css">
+  <link rel="stylesheet" href="css/onedark.css">
+
   <link rel="icon" href="/favicon.ico">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css" integrity="sha512-V5fKCVKOFy36w8zJmLzPH5R6zU6KvuHOvxfMRczx2ZeqTjKRGSBO9yiZjCKEJS3n6EmENwrH/xvSwXqxje+VVA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/blood.min.css" integrity="sha512-2dlRjIVCeDU4/bmM9E95vl23rdUpwLikkV4lcZYwskBW2hItO04TDbsxbmX68Nyw/eGX9v+I+Srrwst7Qu8J9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
 </head>
 
 <body>
   
   <div class="reveal">
     <div class="slides">
-      <section>Slide 1</section>
-      <section>Slide 2</section>
+      <section>
+        <h1>Quantum Reality</h1>
+      </section>
+      <section>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Interference_electrons_double-slit_at_10cm.png" alt="reveal.js logo">
+      </section>
+      
+      <section>
+        <pre>
+          <code data-trim data-noescape>
+(def lazy-fib
+  (concat
+  [0 1]
+  ((fn rfib [a b]
+        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+          </code>
+        </pre>
+      </section>
     </div>
   </div>
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js" integrity="sha512-QYXU3Cojl94ZRiZRjUZpyg1odj9mKTON9MsTMzGNx/L3JqvMA3BQNraZwsZ83UeisO+QMVfFa83SyuYYJzR9hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <script src="js/reveal.js"></script>
+  <script src="js/markdown.js"></script>
+  <script src="js/highlight.js"></script>
   <script>
-  Reveal.initialize();
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight ]
+    });
   </script>
 </body>
 </html>
