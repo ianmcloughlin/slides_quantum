@@ -17,7 +17,7 @@
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/blood.css">
+  <link rel="stylesheet" href="css/night.css">
   <link rel="stylesheet" href="css/onedark.css">
 
   <link rel="icon" href="/favicon.ico">
@@ -33,19 +33,60 @@
         <h1>Quantum Reality</h1>
       </section>
       <section>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Interference_electrons_double-slit_at_10cm.png" alt="reveal.js logo">
+        <img class="r-stretch" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg">
       </section>
-      
       <section>
-        <pre>
-          <code data-trim data-noescape>
-(def lazy-fib
-  (concat
-  [0 1]
-  ((fn rfib [a b]
-        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-          </code>
-        </pre>
+        <img class="r-stretch" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Earth_to_Sun_-_en.png">
+      </section>
+      <section>
+        <img class="r-stretch" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Hydrogen_Density_Plots.png">
+      </section>
+      <section>
+        <img class="r-stretch" style="background-color: white;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Photoelectric_effect_in_a_solid_-_diagram.svg/2048px-Photoelectric_effect_in_a_solid_-_diagram.svg.png">
+      </section>
+      <section>
+        <img class="r-stretch" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Single_slit_and_double_slit2.jpg">
+      </section>
+      <section>
+        <img class="r-stretch" style="background-color: white;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Double-slit.svg/2560px-Double-slit.svg.png">
+      </section>
+      <section>
+        <img class="r-stretch" src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Wave-particle_duality.gif">
+      </section>
+      <section>
+        <img class="r-stretch" style="background-color: white;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/EPR_illustration.svg/2560px-EPR_illustration.svg.png">
+      </section>
+      <section>
+        <img class="r-stretch" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Los_Alamos_colloquium.jpg">
+      </section>
+      <section>
+        <img class="r-stretch" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bombe-rebuild.jpg">
+      </section>
+      <section>
+        <img class="r-stretch" src="https://albert.ias.edu/bitstream/handle/20.500.12111/3496/1.jpg?sequence=1&isAllowed=y">
+      </section>
+      <section>
+        <img class="r-stretch" src="https://upload.wikimedia.org/wikipedia/en/a/a6/Alonzo_Church.jpg">
+      </section>
+      <section>
+        <img class="r-stretch" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/DIAS_1942_photo.jpg">
+      </section>
+      <section>
+        <img class="r-stretch" src="https://upload.wikimedia.org/wikipedia/en/4/42/Kurt_g%C3%B6del.jpg">
+      </section>
+      <section>
+        <img class="r-stretch" src="https://apidyn.royalsociety.org/images/fellows/P22682-David-Deutsch.jpg">
+      </section>
+      <section>
+        \[
+          \mathbb{Z} = \{ \ldots, -2, -1, 0, 1, 2, \ldots \}
+        \]
+        \[
+          \mathbb{R} = \{ \ldots, -2.0, \ldots, -1.0, \ldots 0.0, \ldots, 1.0, \ldots, \pi, \ldots \}
+        \]
+        \[
+          \mathbb{C} = \{ a + bi | a, b \in \mathbb{R} \}
+        \]
       </section>
     </div>
   </div>
@@ -53,10 +94,17 @@
   <script src="js/reveal.js"></script>
   <script src="js/markdown.js"></script>
   <script src="js/highlight.js"></script>
+  <script src="js/math.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
-      plugins: [ RevealMarkdown, RevealHighlight ]
+      math: {
+        mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+        config: 'TeX-AMS_HTML-full',
+        // pass other options into `MathJax.Hub.Config()`
+        TeX: { Macros: { RR: "{\\bf R}" } }
+      }, 
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath ]
     });
   </script>
 </body>
